@@ -1,5 +1,3 @@
-import os
-
 class ReadCode:
 	def __init__(self):
 		self.index = 0
