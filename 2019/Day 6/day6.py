@@ -10,7 +10,6 @@ def create_dic(bidirectional=False):
 	for orbit in orbits:
 		di[orbit[0]].append(orbit[1])
 		if bidirectional: di[orbit[1]].append(orbit[0])
-
 	return di
 
 def find_shortest_path(graph, start, end, path=[]):
