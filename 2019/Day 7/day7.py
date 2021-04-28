@@ -38,16 +38,24 @@ class ReadCode:
 				self.index += self.index_update[opcode]
 				return True, opcode, full_code
 			elif opcode == 5:
-				if position_input(1) != 0: self.index = position_input(2) - 3
+				if position_input(1) != 0: 
+					self.index = position_input(2) - 3
 			elif opcode == 6:
-				if position_input(1) == 0: self.index = position_input(2) - 3
+				if position_input(1) == 0: 
+					self.index = position_input(2) - 3
 			elif opcode == 7:
-				if position_input(1) < position_input(2): full_code[code[3]] = 1
-				else: full_code[code[3]] = 0
+				if position_input(1) < position_input(2): 
+					full_code[code[3]] = 1
+				else:
+					full_code[code[3]] = 0
 			elif opcode == 8:
-				if position_input(1) == position_input(2): full_code[code[3]] = 1
-				else: full_code[code[3]] = 0
-			elif opcode == 99: return True, opcode, full_code
+				if position_input(1) == position_input(2): 
+					full_code[code[3]] = 1
+				else: 
+					full_code[code[3]] = 0
+			elif opcode == 99: 
+				return True, opcode, full_code
+				
 			self.index += self.index_update[opcode]
 			return False, opcode, full_code
 
